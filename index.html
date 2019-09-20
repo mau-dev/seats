@@ -3,7 +3,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <input class="starter" id="input" placeholder="input"/>
+    <p>do you want to buy a ticket?</p>
+    <input class="starter" id="input" placeholder="yes/no"/>
     <h2>output:</h2>
     <p class="starter" id="output"></p>
     <script>
@@ -11,7 +12,9 @@
         var currentInput = event.target.value;
         var result = inputHappened(currentInput);
         dsiplay( result );
+        event.target.value="";
       });
+
 
       var display = function( data ){
         var output = document.querySelector('#output');
